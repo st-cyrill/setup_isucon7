@@ -15,6 +15,7 @@
     mode: 0755
     owner: root
     group: root
+    remote_src: true
 
 - name: link /usr/local/bin/slackboard-cli
   file:
