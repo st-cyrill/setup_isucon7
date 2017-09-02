@@ -1,0 +1,7 @@
+- name: setup parse.rb
+  copy:
+    src: parse.rb
+    dest: "/home/{{ isucon_user }}/parse.rb"
+    mode: 0755
+    owner: "{{ isucon_user }}"
+    group: "{{ isucon_user }}"
