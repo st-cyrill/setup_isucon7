@@ -1,0 +1,8 @@
+- hosts: local
+  become: yes
+  vars_files:
+    - vars/vault_secret.yml
+  roles:
+    - { name: base/packages }
+    - { name: roles/slackboard }
+

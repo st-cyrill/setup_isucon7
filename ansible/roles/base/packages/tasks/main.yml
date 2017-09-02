@@ -1,0 +1,11 @@
+- name: install packages
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - zsh
+    - htop
+    - dstat
+    - screen
+    - tree
+    - vim-nox
+

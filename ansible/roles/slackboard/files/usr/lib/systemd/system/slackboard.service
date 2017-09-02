@@ -1,0 +1,7 @@
+[Unit]
+Description=Slackboard daemon
+
+[Service]
+ExecStart=/usr/local/slackboard/bin/slackboard -c /etc/slackboard/slackboard.toml
+ExecReload=/bin/kill -HUP $MAINPID
+
