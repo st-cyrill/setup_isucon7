@@ -7,5 +7,6 @@
   roles:
     - { name: base/packages }
     - { name: base/tools }
+    - { name: base/user }
     - { name: slackboard }
 

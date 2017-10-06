@@ -1,0 +1,13 @@
+- name: create users
+  user:
+    name: "{{ item.name }}"
+    #groups: "sudo,{{ isucon_user }}"
+    append: true
+  with_items: "{{ vault_secret.users }}"
+
+#- name: Set authorized_keys
+#  authorized_key:
+#    user: "{{ item.name }}"
+#    key: "{{ item.authorized_keys }}"
+#  with_items: "{{ vault_secret.users }}"
+#
