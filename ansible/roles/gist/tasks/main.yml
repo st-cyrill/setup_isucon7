@@ -1,0 +1,8 @@
+- name: copy gist binary
+  copy:
+    src: gist
+    dest: /usr/local/bin/gist
+    mode: 0755
+    owner: root
+    group: root
+

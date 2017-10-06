@@ -1,0 +1,20 @@
+- name: copy notify_slack archive
+  copy:
+    src: notify_slack-linux-amd64.tar.gz
+    dest: /usr/local/src/notify_slack.tgz
+
+- name: extract notify_slack binary
+  unarchive:
+    src: /usr/local/src/notify_slack.tgz
+    dest: /usr/local/notify_slack
+    mode: 0755
+    owner: root
+    group: root
+    remote_src: true
+
+# --- set config
+- name: copy notify_slack config
+  template:
+    src: etc/notify_slack.toml.j2
+    dest: /etc/notify_slack.toml
+

@@ -8,5 +8,6 @@
     - { name: base/packages }
     - { name: base/tools }
     - { name: base/user }
-    - { name: slackboard }
+    - { name: notify_slack }
+    - { name: gist }
 
