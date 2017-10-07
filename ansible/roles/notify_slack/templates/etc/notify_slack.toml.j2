@@ -1,12 +1,5 @@
-[core]
-port = "29800"
-slack_url = "{{ vault_secret.slack_url }}"
-
-[[tags]]
-tag = "general"
+[slack]
+url = "{{ vault_secret.slack_url }}"
 channel = "#general"
-
-[log]
-access_log = "stdout"
-error_log = "stderr"
-level = "error"
+username = "notifier"
+icon_emoji = ":rocket:"
