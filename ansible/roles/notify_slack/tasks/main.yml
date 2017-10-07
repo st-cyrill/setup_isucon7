@@ -6,7 +6,7 @@
 - name: extract notify_slack binary
   unarchive:
     src: /usr/local/src/notify_slack.tgz
-    dest: /usr/local/notify_slack
+    dest: /usr/local
     mode: 0755
     owner: root
     group: root
