@@ -1,9 +1,30 @@
-- name: create users
-  user:
-    name: "{{ item.name }}"
-    #groups: "sudo,{{ isucon_user }}"
-    append: true
-  with_items: "{{ vault_secret.users }}"
+#- name: create users
+#  user:
+#    name: "{{ item.name }}"
+#    #groups: "sudo,{{ isucon_user }}"
+#    append: true
+#  with_items: "{{ vault_secret.users }}"
+
+#- name: .ssh directory exists
+#  file:
+#    path: "/home/{{ isucon_user }}/.ssh"
+#    state: directory
+#    owner: "{{ isucon_user }}"
+#    group: "{{ isucon_user }}"
+#    mode: "0700"
+
+#- name: put private key
+#  copy:
+#    content: "{{ vault_secret.isucon_private_key }}"
+#    dest: "/home/{{ isucon_user }}/.ssh/id_rsa"
+#    owner: "{{ isucon_user }}"
+#    group: "{{ isucon_user }}"
+#    mode: "0600"
+
+- name: set editor vim
+  alternatives:
+    name: editor
+    path: /usr/bin/vim.nox
 
 #- name: Set authorized_keys
 #  authorized_key:
